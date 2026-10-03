@@ -2,7 +2,7 @@
 """
 test_verify_quotes.py
 
-Build-gating assertions for quote-evidence. package.sh runs every *.py directly
+Build-gating assertions for evidence-quote. package.sh runs every *.py directly
 under fixtures/ and treats a nonzero exit as a build failure, so this must never
 silently no-op.
 
@@ -514,7 +514,7 @@ def test_cli(root: Path, files):
 
 
 def main() -> int:
-    with tempfile.TemporaryDirectory(prefix="quote_evidence_fixture_") as tmp:
+    with tempfile.TemporaryDirectory(prefix="evidence_quote_fixture_") as tmp:
         root = Path(tmp)
         files = write_sources(root)
 

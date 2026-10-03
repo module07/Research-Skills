@@ -15,7 +15,7 @@ additive corpus needs no maintenance.
 
 ## Registry
 
-`<project>/.evidence-check/registry.json`, managed by
+`<project>/.evidence-claim/registry.json`, managed by
 `scripts/corpus_inventory.py`. Fields that matter when reading one by hand:
 
 - `unit_of_analysis`, the noun every denominator counts. Set on `init --unit`,

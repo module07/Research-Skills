@@ -1,6 +1,6 @@
 # Fixtures
 
-`test_evidence_check.py` runs as a build gate. `package.sh` executes it before
+`test_evidence_claim.py` runs as a build gate. `package.sh` executes it before
 packaging, and a non-zero exit stops the build.
 
 It builds its own inputs in a temp directory: a minimal `.docx` assembled from

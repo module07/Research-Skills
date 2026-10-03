@@ -1,5 +1,5 @@
 ---
-name: quote-evidence
+name: evidence-quote
 description: >-
   Find, verify and stamp quotes from any corpus of transcripts, notes or
   documents, on any subject matter, in both directions: retrieval, where the
@@ -339,7 +339,7 @@ in files alike:
 
 These counts come from your reading of the corpus, not from a script. Keep
 them visible so the reader can challenge them, and when a finding will go
-into a deliverable, offer to run `evidence-check` over it.
+into a deliverable, offer to run `evidence-claim` over it.
 
 ## What this does not cover yet
 

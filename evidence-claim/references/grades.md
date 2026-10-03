@@ -143,7 +143,7 @@ C12  contradicted                                  [report ¶31]
 
 Speaker labels in the first example are ids because the example is synthetic.
 In a real verdict the stamp carries whatever the source marks, and the
-attribution grade, both per `quote-evidence`.
+attribution grade, both per `evidence-quote`.
 
 Order the report worst grade first: `contradicted`, `overstated`,
 `unsupported`, `understated`, `supported`, `out-of-corpus`. Triage is the

@@ -10,7 +10,7 @@ project actually names its sources.
 
 ## Transcripts
 
-Stamps come from `quote-evidence`, unchanged: speaker, file, locator, with the
+Stamps come from `evidence-quote`, unchanged: speaker, file, locator, with the
 attribution grade in the stamp string.
 
 ```
@@ -23,7 +23,7 @@ Link: the `file://` URI from the registry. A timestamp is not a link, so both go
 in.
 
 Do not hand-write these. Verbatim transcript quotes run through
-`quote-evidence` before the report is written. If it is not installed, drop to
+`evidence-quote` before the report is written. If it is not installed, drop to
 pointer-only evidence for transcripts and say so in the report header.
 
 ## Notes and documents

@@ -1,5 +1,5 @@
 ---
-name: evidence-check
+name: evidence-claim
 description: >-
   Audits a deliverable against the project's own evidence base, on any subject
   matter. Extracts the load-bearing claims from a report, deck or findings doc,
@@ -14,12 +14,12 @@ description: >-
   on check this report against the data, is this deck supported, pressure-test
   my findings, did I overstate this, sanity-check my conclusions, evidence check
   this, ground-truth this doc, does the data back this up. For individual
-  quotes, use quote-evidence.
+  quotes, use evidence-quote.
 ---
 
 # Evidence Check
 
-The unit here is a claim, not a quote. `quote-evidence` answers whether a
+The unit here is a claim, not a quote. `evidence-quote` answers whether a
 string was said. This answers whether an assertion is carried by the evidence,
 where the evidence includes stickies, notes, counts, chart data and documents
 alongside transcripts.
@@ -164,7 +164,7 @@ so a re-run does not overwrite a colleague's markup.
 underneath it is an opinion with a label. Each evidence item carries a stamp
 and, where the source type has one, a link that resolves back to it.
 
-Verbatim quotes from transcripts go through `quote-evidence` for verification
+Verbatim quotes from transcripts go through `evidence-quote` for verification
 and stamping before they enter the report. If that skill is not installed, do
 not hand-write stamps: fall back to pointer-only evidence and say in the report
 that quotes were not verified.

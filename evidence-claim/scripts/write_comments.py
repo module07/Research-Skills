@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write evidence-check verdicts back into a deliverable as comments.
+"""Write evidence-claim verdicts back into a deliverable as comments.
 
     python3 write_comments.py report.docx verdicts.json --dry-run
     python3 write_comments.py report.docx verdicts.json -o report-checked.docx
@@ -69,7 +69,7 @@ PPTX_AUTHORS_CT = (
     "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors+xml"
 )
 
-AUTHOR = "evidence-check"
+AUTHOR = "evidence-claim"
 INITIALS = "EC"
 
 # PowerPoint legacy comment positions are in EMU. 0.25in from the top left of

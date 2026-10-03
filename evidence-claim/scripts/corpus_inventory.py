@@ -14,7 +14,7 @@ the manifest and the exclusion list alongside the findings.
         --pattern "drafts/**" --reason "working drafts, not evidence"
     python3 corpus_inventory.py manifest <project-dir> --json
 
-The registry lives at <project>/.evidence-check/registry.json and records where
+The registry lives at <project>/.evidence-claim/registry.json and records where
 sources are, not what they contain. Every scan re-walks the tree, so an
 additive corpus is picked up without anything being re-registered by hand.
 
@@ -38,7 +38,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 SCHEMA = 1
-REG_DIR = ".evidence-check"
+REG_DIR = ".evidence-claim"
+LEGACY_REG_DIR = ".evidence-check"  # the skill's name before the rename
 REG_FILE = "registry.json"
 
 # What a denominator counts. Not a closed list; --unit takes any noun. These
@@ -89,7 +90,10 @@ def now_iso():
 
 
 def reg_path(project):
-    return Path(project) / REG_DIR / REG_FILE
+    new, old = Path(project) / REG_DIR, Path(project) / LEGACY_REG_DIR
+    if old.is_dir() and not new.exists():
+        old.rename(new)
+    return new / REG_FILE
 
 
 def load(project, required=True):

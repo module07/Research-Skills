@@ -4,8 +4,8 @@ Two [Claude skills](https://support.claude.com/en/articles/12512176-what-are-ski
 
 | Skill | What it does |
 |---|---|
-| [`quote-evidence`](quote-evidence/SKILL.md) | Finds, verifies and stamps quotes from a corpus of transcripts, notes or documents. Each quote carries speaker, file and locator. |
-| [`evidence-check`](evidence-check/SKILL.md) | Audits a report, deck or findings doc against the project's own evidence. Grades each claim and can write verdicts back as comments. |
+| [`evidence-quote`](evidence-quote/SKILL.md) | Finds, verifies and stamps quotes from a corpus of transcripts, notes or documents. Each quote carries speaker, file and locator. |
+| [`evidence-claim`](evidence-claim/SKILL.md) | Audits a report, deck or findings doc against the project's own evidence. Grades each claim and can write verdicts back as comments. |
 
 ## Use
 
@@ -13,7 +13,7 @@ Zip a skill folder (`SKILL.md` at the top of the zip's skill folder) and import 
 
 ## Requirements
 
-Python 3. `evidence-check` needs `lxml` for `.docx`/`.pptx` and `pypdf` for PDF comments (`pip3 install lxml pypdf`).
+Python 3. `evidence-claim` needs `lxml` for `.docx`/`.pptx` and `pypdf` for PDF comments (`pip3 install lxml pypdf`).
 
 ## Tests
 

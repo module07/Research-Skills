@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build-gating assertions for evidence-check.
+"""Build-gating assertions for evidence-claim.
 
 Exercises the three scripts end to end against files built here, so a broken
 parser, a broken registry, or a comment writer that produces an unopenable
 document fails the package build rather than a real audit.
 
-Run directly: python3 fixtures/test_evidence_check.py
+Run directly: python3 fixtures/test_evidence_claim.py
 """
 
 import json
@@ -159,7 +159,7 @@ def test_inventory(tmp):
     make_docx(proj / "report.docx")
 
     run(INVENTORY, "init", proj, "--name", "fixture", "--unit", "participants")
-    check("registry created", (proj / ".evidence-check" / "registry.json").exists())
+    check("registry created", (proj / ".evidence-claim" / "registry.json").exists())
 
     run(INVENTORY, "scan", proj, "--deliverable", "report.docx")
     data = json.loads(run(INVENTORY, "manifest", proj, "--json").stdout)
@@ -167,7 +167,7 @@ def test_inventory(tmp):
     check("transcripts registered", "transcripts/p04-interview.md" in locators)
     check("vtt classified as transcript", any(s["kind"] == "transcript" for s in data["present"] if s["locator"].endswith(".vtt")))
     check("deliverable excluded from its own evidence", "report.docx" not in locators, locators)
-    check("registry itself excluded", not any(l.startswith(".evidence-check") for l in locators))
+    check("registry itself excluded", not any(l.startswith(".evidence-claim") for l in locators))
     check("file sources carry a resolvable link", all(s["link"].startswith("file://") for s in data["present"]))
 
     run(INVENTORY, "exclude", proj, "--pattern", "drafts/**", "--reason", "working drafts")
@@ -197,13 +197,21 @@ def test_inventory(tmp):
 
     # A registry written before unit_of_analysis existed must still read.
     legacy = tmp / "legacy"
-    (legacy / ".evidence-check").mkdir(parents=True)
-    reg = json.loads((proj / ".evidence-check" / "registry.json").read_text(encoding="utf-8"))
+    (legacy / ".evidence-claim").mkdir(parents=True)
+    reg = json.loads((proj / ".evidence-claim" / "registry.json").read_text(encoding="utf-8"))
     reg.pop("unit_of_analysis")
     reg["root"] = str(legacy)
-    (legacy / ".evidence-check" / "registry.json").write_text(json.dumps(reg), encoding="utf-8")
+    (legacy / ".evidence-claim" / "registry.json").write_text(json.dumps(reg), encoding="utf-8")
     data = json.loads(run(INVENTORY, "manifest", legacy, "--json").stdout)
     check("registry without the field falls back", data["unit_of_analysis"] == "sources", data["unit_of_analysis"])
+
+    # A registry under the pre-rename directory name is migrated, not orphaned.
+    old = tmp / "old-name"
+    (old / ".evidence-check").mkdir(parents=True)
+    reg["root"] = str(old)
+    (old / ".evidence-check" / "registry.json").write_text(json.dumps(reg), encoding="utf-8")
+    run(INVENTORY, "manifest", old, "--json")
+    check("legacy registry dir migrated", (old / ".evidence-claim" / "registry.json").exists() and not (old / ".evidence-check").exists())
 
 
 def test_write_comments(tmp):
@@ -383,12 +391,12 @@ def main():
         import lxml  # noqa: F401
     except ImportError:
         sys.exit(
-            "error: lxml is required by evidence-check and is not installed for\n"
+            "error: lxml is required by evidence-claim and is not installed for\n"
             f"       {sys.executable}\n"
             "       pip3 install lxml"
         )
 
-    tmp = Path(tempfile.mkdtemp(prefix="evidence-check-fixture-"))
+    tmp = Path(tempfile.mkdtemp(prefix="evidence-claim-fixture-"))
     try:
         test_document_ir(tmp)
         test_entity_hardening(tmp)

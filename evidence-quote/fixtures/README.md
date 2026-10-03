@@ -1,4 +1,4 @@
-Fixtures for quote-evidence: golden inputs, trigger phrasings that must fire,
+Fixtures for evidence-quote: golden inputs, trigger phrasings that must fire,
 near-misses that must not, and output assertions.
 
 `test_verify_quotes.py` is the build gate. package.sh runs it and treats a
@@ -29,7 +29,7 @@ returns "pass" for everything from sailing through the rest of the suite.
 - "quote me a price for the work" (unrelated sense of quote)
 - "clean up these transcripts" (transcript processing, not quoting)
 - "check whether this deck's conclusions hold up against the interviews"
-  (claims, not quotes: evidence-check)
+  (claims, not quotes: evidence-claim)
 
 ## Behaviour worth re-checking by hand after any matcher change
 

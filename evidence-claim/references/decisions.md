@@ -73,9 +73,9 @@ A misreading is `contradicted` when the source opposes the claim and
 for the same cases without changing the repair. The rationale line names the
 misreading.
 
-## Compose with quote-evidence, do not duplicate it
+## Compose with evidence-quote, do not duplicate it
 
-Verbatim transcript quotes go through `quote-evidence` for verification and
+Verbatim transcript quotes go through `evidence-quote` for verification and
 stamping. The two skills are parallel: separate triggers, neither owns the
 other. The composition is at one point only, the moment a verbatim string is
 printed.
