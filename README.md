@@ -7,6 +7,10 @@ Two [Claude skills](https://support.claude.com/en/articles/12512176-what-are-ski
 | [`evidence-quote`](evidence-quote/SKILL.md) | Finds, verifies and stamps quotes from a corpus of transcripts, notes or documents. Each quote carries speaker, file and locator. |
 | [`evidence-claim`](evidence-claim/SKILL.md) | Audits a report, deck or findings doc against the project's own evidence. Grades each claim and can write verdicts back as comments. |
 
+## Quick reference
+
+New to these? [Evidence skills: quick reference](docs/evidence-skills-reference.md) explains in plain language what each skill does, how they work together, and when to use which.
+
 ## Use
 
 Zip a skill folder (`SKILL.md` at the top of the zip's skill folder) and import it under Settings → Capabilities in the Claude app, or copy the folder into your skills directory.
