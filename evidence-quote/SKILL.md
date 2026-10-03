@@ -1,20 +1,6 @@
 ---
 name: evidence-quote
-description: >-
-  Find, verify and stamp quotes from any corpus of transcripts, notes or
-  documents, on any subject matter, in both directions: retrieval, where the
-  user asks what a corpus says and the answer is built from quotes, and
-  verification, where quotes already exist and need checking. Each quote gets a
-  stamp with speaker, file and locator. Use whenever the user asks to find,
-  pull, show or source quotes, asks what the transcripts or a participant said
-  about a topic, or asks to check, verify or trace a quote. Also use before any
-  quoted string enters any output, chat replies included, and on revision passes
-  over artifacts holding quotes. Trigger on find me quotes about, show me quotes
-  on, what does the corpus say about, tell me about X from the transcripts,
-  source this card, check my quotes, are these quotes real, where does this
-  quote come from, did they actually say that, or does the evidence support this
-  claim. Handles Otter, Reduct, Rev, Teams, VTT, SRT, JSON and unmarked
-  transcripts.
+description: 'Find, verify and stamp quotes from any corpus of transcripts, notes or documents, on any subject matter, in both directions: retrieval, where the user asks what a corpus says and the answer is built from quotes, and verification, where quotes already exist and need checking. Each quote gets a stamp with speaker, file and locator. Use whenever the user asks to find, pull, show or source quotes, asks what the transcripts or a participant said about a topic, or asks to check, verify or trace a quote. Also use before any quoted string enters any output, chat replies included, and on revision passes over artifacts holding quotes. Trigger on find me quotes about, show me quotes on, what does the corpus say about, tell me about X from the transcripts, source this card, check my quotes, are these quotes real, where does this quote come from, did they actually say that, or does the evidence support this claim. Handles Otter, Reduct, Rev, Teams, VTT, SRT, JSON and unmarked transcripts.'
 ---
 
 # Quote Evidence

@@ -1,20 +1,6 @@
 ---
 name: evidence-claim
-description: >-
-  Audits a deliverable against the project's own evidence base, on any subject
-  matter. Extracts the load-bearing claims from a report, deck or findings doc,
-  sweeps the corpus of transcripts, notes, board exports, documents and data
-  for supporting and disconfirming evidence, then grades every claim as
-  supported, overstated, understated, contradicted, unsupported or
-  out-of-corpus, with counts and linked sources. Keeps a registry of the
-  evidence base and prints a manifest of what was searched. Offers to write
-  verdicts back into the document as comments. Use whenever the user wants a
-  report, deck or findings doc checked against the data behind it, asks whether
-  their conclusions hold up, or whether they have misread the evidence. Trigger
-  on check this report against the data, is this deck supported, pressure-test
-  my findings, did I overstate this, sanity-check my conclusions, evidence check
-  this, ground-truth this doc, does the data back this up. For individual
-  quotes, use evidence-quote.
+description: Audits a deliverable against the project's own evidence base, on any subject matter. Extracts the load-bearing claims from a report, deck or findings doc, sweeps the corpus of transcripts, notes, board exports, documents and data for supporting and disconfirming evidence, then grades every claim as supported, overstated, understated, contradicted, unsupported or out-of-corpus, with counts and linked sources. Keeps a registry of the evidence base and prints a manifest of what was searched. Offers to write verdicts back into the document as comments. Use whenever the user wants a report, deck or findings doc checked against the data behind it, asks whether their conclusions hold up, or whether they have misread the evidence. Trigger on check this report against the data, is this deck supported, pressure-test my findings, did I overstate this, sanity-check my conclusions, evidence check this, ground-truth this doc, does the data back this up. For individual quotes, use evidence-quote.
 ---
 
 # Evidence Check
